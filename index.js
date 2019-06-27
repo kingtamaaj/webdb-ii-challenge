@@ -7,7 +7,11 @@ const server = express();
 server.use(express.json());
 server.use(helmet());
 
-// endpoints here
+
+server.get('/', (req, res) => {
+  res.send('<h1> WELCOME TO MY AWESOME API <h1>')
+});
+
 
 const port = 3300;
 server.listen(port, function() {
